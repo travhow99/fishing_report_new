@@ -27,7 +27,7 @@ if(!empty($html)){ //if any html is actually returned
   $last_update_row = $stpetes_xpath->query('//div[@class="riv-report-updated"]');
 
   if ($last_update_row->length > 0) {
-    foreach ($last_update_row as $row) { // p 4 - 6
+    foreach ($last_update_row as $row) { // div 1 - 2
       echo $row->nodeValue . "<br/>";
     }
   }
