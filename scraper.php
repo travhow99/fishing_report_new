@@ -18,9 +18,13 @@ if(!empty($html)){ //if any html is actually returned
 
   $stpetes_row = $stpetes_xpath->query('//div[@class="post-content"] //p');
 
+  $report = [];
+
   if ($stpetes_row->length > 0) {
     foreach ($stpetes_row as $row) { // p 4 - 6
-      echo $row->nodeValue . "<br/>";
+      array_push($report,$row->nodeValue);
+
+      //print_r($report);
     }
   }
 
@@ -28,10 +32,16 @@ if(!empty($html)){ //if any html is actually returned
 
   if ($last_update_row->length > 0) {
     foreach ($last_update_row as $row) { // div 1 - 2
-      echo $row->nodeValue . "<br/>";
+    //  echo $row->nodeValue . "<br/>";
+
     }
   }
 
+  /* Print array results
+  foreach ($report as $result) {
+    echo '<p>' . $result . '</p>';
+  }
+*/
 
 }
 
