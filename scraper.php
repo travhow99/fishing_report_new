@@ -38,6 +38,8 @@ if(!empty($html)){ //if any html is actually returned
   $nymphs = $report[10];
   $streamers = $report[11];
 
+  $current_year = date("Y");
+
   $last_update_row = $stpetes_xpath->query('//div[@class="riv-report-updated"]');
 
   if ($last_update_row->length > 0) {

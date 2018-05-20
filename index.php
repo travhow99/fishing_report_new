@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -16,41 +19,56 @@
     <h1 class="text-center">Poudre River Fishing Report</h1>
 
     <div class="container">
+      <div class="row">
+        <div class="report-container col-md-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <?php include 'scraper.php'; include("class_lib.php");
+                $st_petes = new fly_shop("St. Peter's Fly Shop");
+                //$st_petes->set_name();
+                //echo $Yampa->get_name();
+                print_r(get_declared_classes());
 
-    </div>
 
-    <div class="report-container container">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <?php include 'scraper.php';
-            echo $river_title . '<br>';
-          ?>
+                echo $river_title . '<br>';
+                echo "<p class='shout-out'>Courtesy of " . $st_petes->get_name() . "</p>";
+
+              ?>
+            </div>
+            <div class="panel-body">
+              <?php
+                echo '<p>' .  $report_first . '</p>';
+                echo '<p>' . $report_second . '</p>';
+                echo '<p>' . $disclaimer . '</p>';
+                echo '<p class="streamflow">' . $streamflow . '</p>';
+              ?>
+            </div>
+            <div class="panel-footer">
+              <?php //Eventually turn this into a var
+                  echo '<p><a href="https://stpetes.com/" target="_blank">St. Peter\'s Fly Shop</a>&nbsp;&copy;' . $current_year . '</p>';
+                ?>
+            </div>
+          </div>
         </div>
-        <div class="panel-body">
-          <?php
-            echo '<p>' .  $report_first . '</p>';
-            echo '<p>' . $report_second . '</p>';
-            echo '<p>' . $disclaimer . '</p>';
-          ?>
+
+        <div class="recommendations col-md-3 ">
+          <ul>
+            <h4>Fly Recommendations</h4>
+            <?php
+              //echo $report[8] . '<br>';
+              echo '<h5>Dry Flies</h5>';
+              echo '<li class="rec">' . $dries . '</li>';
+              echo '<h5>Nymphs</h5>';
+              echo '<li class="rec">' . $nymphs . '</li>';
+              echo '<h5>Streamers</h5>';
+              echo '<li class="rec">' . $streamers . '</li>';
+
+                //echo count($report);
+
+            ?>
+          </ul>
+        </div>
       </div>
-      <div class="panel-footer">
-        <?php
-          echo '<p>' . $streamflow . '</p>';
-          ?>
-      </div>
-    </div>
-    </div>
-
-    <div class="recommendations">
-      <?php
-        //echo $report[8] . '<br>';
-        echo $dries . '<br>';
-        echo $nymphs . '<br>';
-        echo $streamers . '<br>';
-
-          //echo count($report);
-
-      ?>
     </div>
 
 
