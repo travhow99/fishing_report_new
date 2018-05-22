@@ -23,16 +23,27 @@
         <div class="report-container col-md-9">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <?php include 'scraper.php'; include("class_lib.php");
-                $st_petes = new fly_shop("St. Peter's Fly Shop");
+              <?php include 'scraper.php'; include 'class_lib.php';
+                //st_petes = new fly_shop("St. Peter's Fly Shop");
                 //$st_petes->set_name();
                 //echo $Yampa->get_name();
-                print_r(get_declared_classes());
+                //print_r(get_declared_classes());
 
+                print_r($cache_la_poudre);
+
+                echo $cache_la_poudre->$st_petes_url;
+                echo $cache_la_poudre->$rocky_mtn_url;
+
+/*
+                echo $big_thompson->name;
+                echo $yampa->name;
+                echo $st_vrain->name;
+                echo $boulder_creek->get_name();
+                //echo $Yampa->get_name();
 
                 echo $river_title . '<br>';
-                echo "<p class='shout-out'>Courtesy of " . $st_petes->get_name() . "</p>";
-
+                //echo "<p class='shout-out'>Courtesy of " . $st_petes->get_name() . "</p>";
+*/
               ?>
             </div>
             <div class="panel-body">
