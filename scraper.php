@@ -28,6 +28,18 @@ if(!empty($html)){ //if any html is actually returned
     }
   }
 
+  // Assign report labels
+  $streamflow = $report[0];
+  $river_title = $report[1];
+  $report_first = $report[3];
+  $report_second = $report[4];
+  $disclaimer = $report[5];
+  $dries = $report[9];
+  $nymphs = $report[10];
+  $streamers = $report[11];
+
+  $current_year = date("Y");
+
   $last_update_row = $stpetes_xpath->query('//div[@class="riv-report-updated"]');
 
   if ($last_update_row->length > 0) {
