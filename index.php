@@ -29,21 +29,21 @@
                 //echo $Yampa->get_name();
                 //print_r(get_declared_classes());
 
-                print_r($cache_la_poudre);
+                //print_r($cache_la_poudre);
 
-                echo $cache_la_poudre->$st_petes_url;
-                echo $cache_la_poudre->$rocky_mtn_url;
+                //echo '<a target="_blank" href="' . $cache_la_poudre->st_petes_url . '">' . $cache_la_poudre->st_petes_url . '</a><br>';
+                //echo '<a target="_blank" href="' . $cache_la_poudre->rocky_mtn_url . '">' . $cache_la_poudre->rocky_mtn_url . '</a>';
 
-/*
+
                 echo $big_thompson->name;
                 echo $yampa->name;
-                echo $st_vrain->name;
+                echo $st_vrain->get_name();
                 echo $boulder_creek->get_name();
                 //echo $Yampa->get_name();
 
                 echo $river_title . '<br>';
                 //echo "<p class='shout-out'>Courtesy of " . $st_petes->get_name() . "</p>";
-*/
+
               ?>
             </div>
             <div class="panel-body">

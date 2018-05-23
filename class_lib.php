@@ -31,34 +31,32 @@
 
   class river extends fly_shop
   {
-      function __construct($river_name) {
+      function __construct($river_name, $river_url_u, $river_url) {
         $this->set_name($river_name);
+        $this->st_petes_url = 'https://stpetes.com/blog/river-reports/' . $river_url;
+        $this->rocky_mtn_url = 'http://rockymtanglers.com/' . $river_url_u . '.riv';
+
+        // To-do
+          // Create getter methods for each var
       }
+      /*
       function make_st_petes($river_url) {
-        $this->$st_petes_url = /*'https://stpetes.com/blog/river-reports/' . */$river_url;
-      }
+        $this->$st_petes_url = /*'https://stpetes.com/blog/river-reports/' . *///$river_url;
+    /*  }
 
       function make_rocky($river_url_u) {
-        $this->$rocky_mtn_url = /*'http://rockymtanglers.com/' . */$river_url_u;// . '.riv';
+        $this->$rocky_mtn_url = 'http://rockymtanglers.com/' . $river_url_u;// . '.riv';
       }
+      */
   }
 
-$cache_la_poudre = new river("Cache la Poudre");
-//$cache_la_poudre->$st_petes_url = "https://stpetes.com/blog/river-reports/cache-la-poudre";
-$cache_la_poudre->make_rocky("Cache_La_Poudre_River");
-$cache_la_poudre->make_st_petes("cache-la-poudre");
+$cache_la_poudre = new river("Cache la Poudre", "Cache_La_Poudre_River", "cache-la-poudre");
 
-$big_thompson = new river("Big Thompson");
-$yampa = new river("Yampa");
-$boulder_creek = new river("Boulder Creek");
-$st_vrain = new river("St. Vrain");
-
-
-  $river_names = [];
-  foreach ($rivers as $river_name) {
-    $river_name = new river($river_name);
-    array_push($river_names, $river_name);
-  }
+$big_thompson = new river("Big Thompson", "Big_Thompson_River", "big-thompson");
+$yampa = new river("Yampa", "Yampa_River", "");
+$boulder_creek = new river("Boulder Creek", "Boulder_Creek", "");
+$st_vrain = new river("St. Vrain", "Saint_Vrain_River", "");
+$rmnp = new river("Rocky Mountain National Park", "Rocky_Mtn_Nat_Park", "rmnp-fishing-report")
 
 
 
