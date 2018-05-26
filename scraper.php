@@ -1,5 +1,6 @@
 <?php
 
+
 $html = file_get_contents('https://stpetes.com/blog/river-reports/cache-la-poudre/');
 
 // echo $html;
@@ -48,8 +49,6 @@ if(!empty($html)){ //if any html is actually returned
 
     }
   }
-
-
 
 }
 
