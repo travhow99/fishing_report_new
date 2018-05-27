@@ -80,9 +80,21 @@
           </ul>
         </div>
       </div>
+
+      <div class='row'>
+        <div class="report-container col-md-9">
+
+          <?php include 'rocky.php';
+
+            echo '<div class="rocky-report"><p>' . $st_petes . '</p></div>';
+
+          ?>
+        </div>
+      </div>
     </div>
 
 
+    <script src="js/app.js"></script>
 
   </body>
 </html>

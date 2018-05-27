@@ -34,7 +34,7 @@ if(!empty($html)){ //if any html is actually returned
     }
     //print_r($report[147]);
     $st_petes = $report[147];
-    echo $st_petes;
+    // echo $st_petes;
   }
 
 }
