@@ -1,6 +1,6 @@
 <?php
 
-  $rivers = ["cache_la_poudre"];//, "Big Thompson", "yampa", "Boulder Creek", "St. Vrain"];
+  //$rivers = [];//, "Big Thompson", "yampa", "Boulder Creek", "St. Vrain"];
 
 
   class fly_shop {
@@ -31,10 +31,13 @@
 
   class river extends fly_shop
   {
+
       function __construct($river_name, $river_url_petes, $river_url_rocky) {
         $this->set_name($river_name);
         $this->st_petes_url = 'https://stpetes.com/blog/river-reports/' . $river_url_petes;
         $this->rocky_mtn_url = 'http://rockymtanglers.com/' . $river_url_rocky . '.riv';
+
+        // Add each to array ?
 
         // To-do
           // Create getter methods for each var
@@ -50,8 +53,9 @@
       */
   }
 
-$cache_la_poudre = new river("Cache la Poudre", "Cache_La_Poudre_River", "cache-la-poudre");
+$rivers = ['cache_la_poudre', 'big_thompson', 'yampa', 'boulder_creek', 'st_vrain', 'rmnp'];
 
+$cache_la_poudre = new river("Cache la Poudre", "Cache_La_Poudre_River", "cache-la-poudre");
 $big_thompson = new river("Big Thompson", "Big_Thompson_River", "big-thompson");
 $yampa = new river("Yampa", "Yampa_River", "");
 $boulder_creek = new river("Boulder Creek", "Boulder_Creek", "");
@@ -59,5 +63,4 @@ $st_vrain = new river("St. Vrain", "Saint_Vrain_River", "");
 $rmnp = new river("Rocky Mountain National Park", "Rocky_Mtn_Nat_Park", "rmnp-fishing-report");
 
 // echo $rmnp->get_Name();
-
 ?>
