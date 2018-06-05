@@ -9,11 +9,18 @@ function create_url(){
 
   include 'class_lib.php';
   //print_r($rivers);
+  //echo $cache_la_poudre->st_petes_url;
+  //print_r($rivers);
 
-  foreach ($rivers as $value) {
-    $url = 'https://stpetes.com/blog/river-reports/' . $value;
-    echo '<a href="' . $url . '">click</a><br>';
+  //print_r($rivers);
+  foreach ($rivers as $riv) {
+  //  echo $riv->st_petes_url . ', ' . $riv->rocky_mtn_url . '<br>';
+    echo $riv->make_url($riv->name, $riv->rocky_mtn_url);
+
   }
+
+
+
 }
 
 
@@ -66,5 +73,7 @@ function create_url(){
 
 gather_petes();
 create_url();
+
+
 
 ?>
